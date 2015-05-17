@@ -7,6 +7,9 @@ VERSION_NUMBER = "v0.3.0 Beta"
 import pygame,sys,os,math,time,pygame.gfxdraw,random,pygame.mixer
 from pygame.locals import *
 
+
+
+
 #Constants
 PGNAME = "MiniWorld"
 BGCOLOR = (255,255,255)
@@ -23,7 +26,11 @@ def centerImage(SCREEN_W, SCREEN_H, IMG_W, IMG_H):
 
 #Inits
 pygame.init()
+pygame.mixer.init()
 clock = pygame.time.Clock()
+
+hit = pygame.mixer.Sound("Data/Other/lightsaber.wav")
+miss = pygame.mixer.Sound("Data/Other/swoosh.wav")
 
 #Screen
 STARTSCREEN_W = 1001
@@ -281,6 +288,8 @@ class Mob(pygame.sprite.Sprite):
             else:
                 self.hp -= 5
  
+	    hit.play()
+
         #Check health
         if self.hp <= 0:
             self.kill()
@@ -539,6 +548,7 @@ while True:
                 #Attacked
                 if event.unicode == " ":
                     attack = 1
+                    miss.play()
                     
         #Moved
         if pygame.mouse.get_pressed()[0]:
