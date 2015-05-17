@@ -1,5 +1,5 @@
 #This is Christian's change
-#This is Megaladon"s 23434
+#This is Megaladon"s
 #Important
 VERSION_NUMBER = "v0.3.0 Beta"
 
