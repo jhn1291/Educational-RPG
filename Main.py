@@ -19,12 +19,12 @@ pygame.init()
 clock = pygame.time.Clock()
 
 #Screen
-screen = pygame.display.set_mode((540,370))
+screen = pygame.display.set_mode((1001,552))
 pygame.display.set_caption(PGNAME)
 pygame.display.set_icon(pygame.image.load("Data/Graphics/EIcon.png"))
 screen.fill(BGCOLOR)
 
-screen.blit(pygame.transform.scale(pygame.image.load("Data/Graphics/JStLogo.png"),(540,370)),(0,0))
+screen.blit(pygame.transform.scale(pygame.image.load("Data/Graphics/QgVDt1l.jpg"),(1001,552)),(0,0))
 
 pygame.display.update()
 
