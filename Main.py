@@ -14,12 +14,20 @@ FPS_MAX = 90
 DATA_DIR = "Data"
 BLOCKSIZE = 16
 
+
+def centerImage(SCREEN_W, SCREEN_H, IMG_W, IMG_H): 
+
+  return ((SCREEN_W / 2) - (IMG_W / 2), (SCREEN_H / 2) - (IMG_H / 2))
+
+
 #Inits
 pygame.init()
 clock = pygame.time.Clock()
 
 #Screen
-screen = pygame.display.set_mode((1001,552))
+STARTSCREEN_W = 1001
+STARTSCREEN_H= 552
+screen = pygame.display.set_mode((STARTSCREEN_W,STARTSCREEN_H))
 pygame.display.set_caption(PGNAME)
 pygame.display.set_icon(pygame.image.load("Data/Graphics/EIcon.png"))
 screen.fill(BGCOLOR)
@@ -29,6 +37,17 @@ screen.blit(pygame.transform.scale(pygame.image.load("Data/Graphics/QgVDt1l.jpg"
 pygame.display.update()
 
 time.sleep(2)
+
+screen.fill(BGCOLOR)
+GIRL_W = 500
+GIRL_H = 497
+
+centercoords = centerImage(STARTSCREEN_W, STARTSCREEN_H, GIRL_W, GIRL_H)
+screen.blit(pygame.transform.scale(pygame.image.load("Data/Graphics/hot-fit-girls-women-7.jpg"),(500,497)),centercoords)
+
+pygame.display.update()
+
+time.sleep(3)
 
 #Functions
 #Make a textured background
