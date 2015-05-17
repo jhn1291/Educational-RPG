@@ -1,5 +1,6 @@
 #This is Christian's change
 #This is Megaladon"s
+#git-cola test
 #Important
 VERSION_NUMBER = "v0.3.0 Beta"
 
