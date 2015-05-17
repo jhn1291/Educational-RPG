@@ -4,7 +4,7 @@
 VERSION_NUMBER = "v0.3.0 Beta"
 
 #Imports
-import pygame,sys,os,math,time,pygame.gfxdraw,random
+import pygame,sys,os,math,time,pygame.gfxdraw,random,pygame.mixer
 from pygame.locals import *
 
 #Constants
