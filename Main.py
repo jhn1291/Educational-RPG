@@ -1,5 +1,4 @@
-#This is Christian's change
-# Dont have time for shit today!
+#This is Christian's change,beep
 #This is Megaladon"s
 #git-cola test
 #Important
