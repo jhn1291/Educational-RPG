@@ -2,6 +2,7 @@
 # COLA TEST!@#
 #This is Megaladon"s
 #git-cola test
+#fuck
 #Important
 VERSION_NUMBER = "v0.3.0 Beta"
 
