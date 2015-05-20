@@ -46,7 +46,7 @@ screen.blit(pygame.transform.scale(pygame.image.load("Data/Graphics/QgVDt1l.jpg"
 
 pygame.display.update()
 
-time.sleep(2)
+time.sleep(0.5)
 
 screen.fill(BGCOLOR)
 GIRL_W = 500
@@ -57,7 +57,7 @@ screen.blit(pygame.transform.scale(pygame.image.load("Data/Graphics/hot-fit-girl
 
 pygame.display.update()
 
-time.sleep(3)
+time.sleep(0.5)
 
 #Functions
 #Make a textured background
@@ -282,6 +282,8 @@ class Mob(pygame.sprite.Sprite):
            pygame.mouse.get_pos()[1] > self.pos[1] and pygame.mouse.get_pos()[1] < self.pos[1] + self.image.get_height() and\
            pygame.mouse.get_pressed()[2]) or attack) and distance(self.pos,player.pos) < 50:
 
+            hit.play()
+
             if player.inventory[player.selected] != 0:
                 self.hp -= player.inventory[player.selected].damage
                 
@@ -290,7 +292,6 @@ class Mob(pygame.sprite.Sprite):
             else:
                 self.hp -= 5
  
-	    hit.play()
 
         #Check health
         if self.hp <= 0:
